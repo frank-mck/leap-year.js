@@ -22,9 +22,13 @@ const Test = {
       if (Test.leapYear(year)) { leapYears.push(year) }
     }
     return leapYears;
+  },
+
+  getClosestLeapYear: (year) => {
+    return Test.getLeapYears(year, year + 50)[0]
   }
 }
 
-console.log(Test.getLeapYears(1991, 2021))
+console.log(Test.getClosestLeapYear(1991))
 
 module.exports = { Test };
