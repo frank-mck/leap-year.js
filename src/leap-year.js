@@ -14,7 +14,17 @@ const Test = {
       case !Test.check(year, 4):
       return false;
     }
+  },
+
+  getLeapYears: (startYear, endYear) => {
+    let leapYears = [];
+    for (let year = startYear; year < endYear; year++) {
+      if (Test.leapYear(year)) { leapYears.push(year) }
+    }
+    return leapYears;
   }
 }
+
+console.log(Test.getLeapYears(1991, 2021))
 
 module.exports = { Test };
